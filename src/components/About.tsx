@@ -1,0 +1,110 @@
+import React from 'react';
+import { motion } from 'motion/react';
+import { CheckCircle2, HeartHandshake, ShieldCheck, Star } from 'lucide-react';
+
+export default function About() {
+  const specialities = [
+    "Knowledgeable team of professionals",
+    "Complete client satisfaction",
+    "Ethical business policies",
+    "Live in touch with our customers",
+    "Reliable services",
+    "Transparent dealings",
+    "Easy payment mode",
+    "We listen, we understand, we provide solutions",
+  ];
+
+  return (
+    <section id="about" className="py-24 bg-yellow-50 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
+          >
+            About Us
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-lg text-gray-600 leading-relaxed"
+          >
+            Welcome to Sidhpur Matrugaya Pandit Prashant Pandya, your trusted spiritual partner for conducting sacred Hindu rituals with devotion, authenticity, and spiritual precision.
+          </motion.p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-yellow-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <Star className="text-yellow-500 mr-3 h-6 w-6" />
+                Our Specialities
+              </h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {specialities.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-yellow-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-yellow-100/50 p-8 rounded-2xl border border-yellow-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <HeartHandshake className="text-yellow-600 mr-3 h-6 w-6" />
+                A Great Experience
+              </h3>
+              <p className="text-gray-700">
+                Located in the holy town of Sidhpur, Gujarat, which is especially revered for Matrugaya rituals, we offer complete Vedic services for ancestral peace and spiritual liberation.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative group">
+              <img 
+                src="https://storage.googleapis.com/aistudio-janus-prod-app-data/user_data/images/3035f8d6-4448-4389-9e8c-5f80b95d1d6a.jpg" 
+                alt="Pandit Prashant Pandya" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <p className="text-2xl font-bold mb-1">Pandit Prashant Pandya</p>
+                <p className="text-yellow-300 font-medium">Matrugaya Tirth Pandit</p>
+              </div>
+            </div>
+            
+            {/* Floating badge */}
+            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-yellow-100 max-w-[240px] z-10">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="bg-yellow-100 p-3 rounded-full">
+                  <ShieldCheck className="h-6 w-6 text-yellow-600" />
+                </div>
+                <div>
+                  <p className="font-bold text-gray-900">Authentic</p>
+                  <p className="text-sm text-gray-500">Vedic Traditions</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
