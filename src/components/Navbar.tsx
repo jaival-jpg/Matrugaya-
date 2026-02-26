@@ -9,6 +9,7 @@ export default function Navbar() {
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
     { name: 'Gallery', href: '#gallery' },
+    { name: 'Videos', href: '#videos' },
     { name: 'Contact', href: '#contact' },
   ];
 

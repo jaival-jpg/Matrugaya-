@@ -78,7 +78,7 @@ export default function About() {
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative group">
               <img 
-                src="https://storage.googleapis.com/aistudio-janus-prod-app-data/user_data/images/3035f8d6-4448-4389-9e8c-5f80b95d1d6a.jpg" 
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjha4sLfGPpxdNmgO8MOL4qJHtc87UQOvqK7qyvt97XOGg26pri_UvWM36GJXaDpkevImtgdVzmM5CIx6UuzUDUkaWkxxvD-m69RFFDzaj1TM-5K5PfG-W33T0JfnoYqOTY2jrbP6UOMlSNFi1RB91qIh3EXPvL6hFz7PEvVRkqQv3B9wHlk1htN05MsuRG/s932/21110.jpg" 
                 alt="Pandit Prashant Pandya" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"

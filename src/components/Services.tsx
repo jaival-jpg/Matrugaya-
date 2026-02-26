@@ -7,27 +7,27 @@ export default function Services() {
     {
       title: "Matrugaya",
       description: "A highly sacred ritual performed only at Sidhpur for the peace and salvation of mother's souls. According to Hindu beliefs, this ceremony brings eternal peace to the departed maternal soul.",
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhax3S3m43pon7A3CBbJYRDnRZM49nDaAD947WbjC3v72XyGOvlGQVsk_WH0SAO4U41amkz8PFd-mG2ZXsq0_nLRYJ2TWI4IwOrznV_4Kaa-lU03YW6chNhyphenhyphenEQrVKec_9_l5TIb_7BxXZDNAmgX5x6RHjeK7Sd4fUUy4TsuhZeR-8Id2QSY7OEfWzylSn_A/s520/26714.jpg"
     },
     {
       title: "Tripindi Shraddh",
       description: "A ritual to appease unsatisfied or forgotten ancestral spirits. It helps remove ancestral doshas (pitru dosh) and ensures peace in family life.",
-      image: "https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjDqTmni_nrBc1gyiGqLoHbSrI4iMxI68oG2ClwVKNEK6GA-mfIYLJeGo8n6AFnKtatveDoOj5W_y8RjCeW6h0TVJ-i9pM5Zbt4gnc7nFKz-fE8UTfkL9sUcUSx9__2Un4M5WYDIlVZTggfrF7XwBeBOr3CVKyoMTLLQGtlRxMFKUpeWYuQD9MXrCc2Lat/s506/26709.jpg"
     },
     {
       title: "Narayan Bali / Nag Bali",
       description: "Powerful rituals for those suffering from ancestral curses, untimely deaths in the family, or repeated obstacles in life. This ceremony helps cleanse karmic blockages and brings spiritual upliftment.",
-      image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzymPegfgouQFJC5y8MdH47Ubl9ZWH_bEugBVKKACCC2q-VcLDOQ7u_IYLn_rZbad7TRG0CH5EBNl7xJcNa2Vt7tm5tAns0fhwMa4l99oGOZ2ow4KUqR62tw1RjNxXPZXUfHOu21ZOyyeUSaL8CEdwqFWvqvALs_jJYY8YUn67-f82otKYKCPlcAZxWJs6/s1280/26720.jpg"
     },
     {
       title: "Asthi Visarjan",
       description: "Ceremonial immersion of the ashes of the deceased in the sacred Saraswati River in Sidhpur as per Hindu religious rites.",
-      image: "https://images.unsplash.com/photo-1514222709107-a180c68d72b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFlQr4h66GwxwZsB-zTn-018on7dUq_dHApLhEtNQBMXGvI0MhAHGe7WXgKTsxwF_xJR89hRMoJlGcRzXmlTeEuLT1AIbSYViurdxih1Dz92nCp60mj-qQN8pxxOaL35G-C0CgbnYHG-TFkUplzj49eCUOR77IRXKjhqsDpz4Prm1vhJzqsIz5HIutwVWt/s735/26710.jpg"
     },
     {
       title: "Pind Daan",
       description: "A crucial offering made to the souls of ancestors for their liberation (moksha). It is considered an important duty (karma) of every descendant.",
-      image: "https://images.unsplash.com/photo-1621213076126-724806085a6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+      image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1BAsgyqGzXtFYU8JW1c_amZb9kh5l4hrnpYxeUGE2hhWEgFSjNOuw_qaXwFBQolmePYf0vayONJ-pixe1Q3K_fdJLGr429OdtYAcBguE5gqOwWfRb2srMLVxrD7aeDMmMwgNxK_e715Evogd6oEoOR82vnhP9sKg4QEKzWx9s9RGm17P3Pph3U8CFcm6l/s702/26718.jpg"
     }
   ];
 

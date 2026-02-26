@@ -3,12 +3,13 @@ import { motion } from 'motion/react';
 
 export default function Gallery() {
   const images = [
-    { src: "https://storage.googleapis.com/aistudio-janus-prod-app-data/user_data/images/b440e28d-195c-4217-a169-d9129528646b.jpg", alt: "Rituals at Sidhpur" },
-    { src: "https://storage.googleapis.com/aistudio-janus-prod-app-data/user_data/images/0010901e-282c-47a3-87f5-862803b904c6.jpg", alt: "Ceremonies" },
-    { src: "https://storage.googleapis.com/aistudio-janus-prod-app-data/user_data/images/841029c9-9477-4404-b903-82054a3628bb.jpg", alt: "Family Participation" },
-    { src: "https://storage.googleapis.com/aistudio-janus-prod-app-data/user_data/images/318318b7-601d-4f18-a68f-a9572620a2e7.jpg", alt: "River Rituals" },
-    { src: "https://storage.googleapis.com/aistudio-janus-prod-app-data/user_data/images/223b2b93-b68f-449e-b83c-f48123288c83.jpg", alt: "Temple Views" },
-    { src: "https://storage.googleapis.com/aistudio-janus-prod-app-data/user_data/images/63556093-f14d-495c-89a1-8b066614457e.jpg", alt: "Puja Process" },
+    { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhFnEM7kYfZZycc-1RCJbkRd8L_qRFdcol-kw-ALDDV-pyvBhcDvK2kfrzX5me3EZVSFTAtJKxVvQP6y5ab3VRs1t50QnD53al04neZr_xcRn35o8CSu_T8NrtCa9__45xKrtmbhA4_ZWys7OlYgsOGGxfUTxaTdNDx0GMDYZQD0auPFBDP0396u5xu1b7/s1280/26732.jpg", alt: "Matrugaya Rituals" },
+    { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitx-MQQKMjeNW8TK5oiw3v9nf0R4XKnARKv-lvnACrI5dOaQFGb7trnnRKmKPNDlicZ6A1EZOHoyMN7pCf7HJ0sYjw4GrByH-t9KmlQfEGi5hFFl1YChfEBZ2stk2o04ivk7zWH9B3JSiovSvbMGCDXFOCD_44PzvQCCUrXIUf8n5uXGTdIYVIvspt5yXI/s1083/26711.jpg", alt: "Sidhpur Ceremonies" },
+    { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitx-MQQKMjeNW8TK5oiw3v9nf0R4XKnARKv-lvnACrI5dOaQFGb7trnnRKmKPNDlicZ6A1EZOHoyMN7pCf7HJ0sYjw4GrByH-t9KmlQfEGi5hFFl1YChfEBZ2stk2o04ivk7zWH9B3JSiovSvbMGCDXFOCD_44PzvQCCUrXIUf8n5uXGTdIYVIvspt5yXI/s1083/26711.jpg", alt: "Family Participation" },
+    { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrjTREHtuoEVnK0WJO7nKz4hjJaWzZ3gNz336Huvcbu9oxpw8xFe6OlkxQNM827Pts_IWK0Dm3LJP91jmph_pyj6y2_F09hb6FQFhGeedjJnv0mIEyWN-DCyx59srn6SIRJ97wBCz1Bfkc7UrzazlDToi3kKGOxyoPkyUAP3vXkYr-nGlRCRed3foLdFUW/s1600/26702.jpg", alt: "River Rituals" },
+    { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZGOVj8m27qi5zJfnKF4DNwMsVNVSg1KRiB8MMXVFUs0pRBIW0Bsik0ZWCIX4W6MEwky2pAA1LEktrarUp7ZLVy6_bAwZKtp0CD0a7bLW_UKAJwmHZQSaHjJYCjIklpzGnebTmVu3HsP7xXiK-JDDw7-Qgbr9pD6KEQTLlLrS2AvEDWjrY3OgLgJEhKlJC/s1600/26705.jpg", alt: "Temple Views" },
+    { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKrGcSCfI00PXucjbE6WaZzCgXogneH4ZoFtk-3ma8u2H9PzRYAAI6fdz3MAPBN2k7Ebs3UWMMWxNmGeeiWFxVqulNIef0mjvjqM8MtOFTpFnihQagJNRR2NsaeOY4CSgF2UZNV762Vg0yncNKjohnRMk20Mec1Gq51umFRLJQjFOZTYpxPMrdm24ghHXd/s1600/26721.jpg", alt: "Puja Process" },
+    { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkxwYdhGNzkXEcwXpm_eP1u5fDf1Erc4rQG33Rbc3jIRRnib5CNdYUsGijnrtYSy6Cb96eZLgN5PEz-75m9Y-Jqd0JHfmTZAfAvyYDOab79q2Bi0ZduJjQZiC6K6ZXC_vxVipxT205hgTRUz9rV5fsUal7fdWKe0K4XuCgna8Ay7NBir6PlZM4Z454QwWm/s1280/26716.jpg", alt: "Vedic Traditions" },
   ];
 
   return (
