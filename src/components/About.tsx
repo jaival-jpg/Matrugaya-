@@ -91,7 +91,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                 <p className="text-2xl font-serif italic mb-1">Pandit Prashant Pandya</p>
-                <p className="text-yellow-300 font-medium tracking-wide">Matrugaya Tirth Pandit</p>
+                <p className="text-yellow-300 font-medium tracking-wide">Matrugaya Pandit</p>
               </div>
             </div>
             
@@ -103,7 +103,7 @@ export default function About() {
                 </div>
                 <div>
                   <p className="font-bold text-gray-900">Authentic</p>
-                  <p className="text-sm text-gray-500">Vedic Traditions</p>
+                  <p className="text-sm text-gray-500">Matrugaya Pandit</p>
                 </div>
               </div>
             </div>
