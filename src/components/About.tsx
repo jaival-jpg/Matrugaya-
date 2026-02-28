@@ -96,7 +96,7 @@ export default function About() {
             </div>
             
             {/* Floating badge */}
-            <div className="absolute -bottom-6 -left-6 bg-white/80 backdrop-blur-xl p-6 rounded-2xl shadow-2xl border border-white/50 max-w-[240px] z-10 hover:-translate-y-2 transition-transform duration-500">
+            <div className="absolute -bottom-12 -left-6 bg-white/80 backdrop-blur-xl p-6 rounded-2xl shadow-2xl border border-white/50 max-w-[240px] z-10 hover:-translate-y-2 transition-transform duration-500">
               <div className="flex items-center gap-4 mb-2">
                 <div className="bg-yellow-100 p-3 rounded-full">
                   <ShieldCheck className="h-6 w-6 text-yellow-600" />
