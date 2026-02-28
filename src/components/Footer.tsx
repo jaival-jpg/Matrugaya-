@@ -105,7 +105,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-base text-gray-400 mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Sidhpur Matrugaya Pandit Prashant Pandya. All rights reserved.
+            &copy; {new Date().getFullYear()} Matrugaya Tirth Pandit Prashant Pandya. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="https://connecttapp.in/sidhpur-matrugaya-pandit-prashant-pandya" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500 transition-colors text-sm">
