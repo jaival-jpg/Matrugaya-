@@ -4,43 +4,51 @@ import { Phone, CalendarCheck } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex flex-col pt-24 md:pt-32 pb-24 md:pb-32 overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-yellow-900 to-black overflow-hidden">
+        {/* Blurred background for mobile to fill empty space */}
         <img
-          src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-          alt="Pandit doing Pooja"
-          className="w-full h-full object-cover"
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUOaKHmsMCWemXDcWZIdWcQxtnhQSXkhdZuQfafkAxHe2__1n392YuG_FC7gLKgnYVlWTUHOeUgdQ9XLa6c6YCdma7M7P-WeGkaXp3VoImri0plmThCAHbEWp1aAVQ-SroQSecFTqeuKh_1ZpxUKr238fT2kBdMmeuw29nRcWB508OFp41PPzJFJS74-eE/s1600/41817.jpg"
+          alt="Background Blur"
+          className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-60 md:hidden scale-110"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-900/80 to-black/60 mix-blend-multiply"></div>
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUOaKHmsMCWemXDcWZIdWcQxtnhQSXkhdZuQfafkAxHe2__1n392YuG_FC7gLKgnYVlWTUHOeUgdQ9XLa6c6YCdma7M7P-WeGkaXp3VoImri0plmThCAHbEWp1aAVQ-SroQSecFTqeuKh_1ZpxUKr238fT2kBdMmeuw29nRcWB508OFp41PPzJFJS74-eE/s1600/41817.jpg"
+          alt="Pandit doing Pooja"
+          className="relative w-full h-full object-contain md:object-cover drop-shadow-[0_0_30px_rgba(0,0,0,0.8)] brightness-125"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-yellow-900/40 via-transparent to-transparent mix-blend-multiply"></div>
+        {/* Bottom shadow gradient for stylish blend */}
+        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white flex flex-col justify-between flex-1 w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-6"
+          className="space-y-6 -mt-8 md:-mt-12"
         >
-          <motion.span 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="inline-block py-1 px-3 rounded-full bg-yellow-500/20 border border-yellow-400/30 text-yellow-200 text-sm font-semibold tracking-wider uppercase"
-          >
-            Sidhpur Matrugaya Tirth
-          </motion.span>
-          
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white drop-shadow-lg">
-            Pandit Prashant Pandya
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif italic tracking-wide text-yellow-400 drop-shadow-2xl leading-tight">
+            Matrugaya Tirth Pandit <br />
+            Prashant Pandya
           </h1>
+        </motion.div>
           
-          <p className="mt-4 text-xl md:text-2xl text-yellow-100 max-w-3xl mx-auto font-light drop-shadow-md">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="mt-auto pt-12"
+        >
+          <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto font-bold drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]">
             Your trusted spiritual partner for conducting sacred Hindu rituals with devotion, authenticity, and spiritual precision.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

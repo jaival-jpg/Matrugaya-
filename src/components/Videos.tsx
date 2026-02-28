@@ -10,14 +10,14 @@ export default function Videos() {
   ];
 
   return (
-    <section id="videos" className="py-24 bg-white relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="videos" className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-6xl font-serif italic text-gray-900 mb-6 drop-shadow-sm"
           >
             Video Gallery
           </motion.h2>
@@ -43,18 +43,21 @@ export default function Videos() {
                 if (index === 0) setPlayFirst(true);
               }}
               transition={{ delay: index * 0.2 }}
-              className="rounded-3xl overflow-hidden shadow-2xl border border-gray-100 aspect-video w-full bg-gray-100"
+              whileHover={{ scale: 1.05, rotateY: 5, rotateX: 5 }}
+              className="rounded-[2rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.3)] aspect-video w-full bg-white p-3 transform perspective-1000 transition-all duration-500 group"
             >
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.youtube.com/embed/${video.id}?rel=0${index === 0 && playFirst ? '&autoplay=1&mute=1' : ''}`}
-                title={video.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
+              <div className="w-full h-full rounded-2xl overflow-hidden relative shadow-inner">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${video.id}?rel=0${index === 0 && playFirst ? '&autoplay=1' : ''}`}
+                  title={video.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </motion.div>
           ))}
         </div>

@@ -10,28 +10,24 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-yellow-500">Matrugaya</span>
+              <span className="text-2xl font-serif font-bold text-yellow-500">Matrugaya</span>
               <span className="ml-2 text-sm font-medium text-gray-400">Pandit Prashant Pandya</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Your trusted spiritual partner for conducting sacred Hindu rituals with devotion, authenticity, and spiritual precision in Sidhpur, Gujarat.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors">
+              <a href="https://www.facebook.com/share/1AmCQxwg14/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500 hover:scale-125 transition-all duration-300">
                 <span className="sr-only">Facebook</span>
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors">
+              <a href="https://www.instagram.com/matrugayapandit_prashantpandya?utm_source=qr&igsh=djcwMjNkaGV1NG5m" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500 hover:scale-125 transition-all duration-300">
                 <span className="sr-only">Instagram</span>
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors">
+              <a href="https://youtube.com/@matrugaya_prashantpandya?si=xrudOufI0EpZHc0O" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-yellow-500 hover:scale-125 transition-all duration-300">
                 <span className="sr-only">YouTube</span>
                 <Youtube className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-yellow-500 transition-colors">
-                <span className="sr-only">Twitter</span>
-                <Twitter className="h-6 w-6" />
               </a>
             </div>
           </div>
@@ -41,19 +37,22 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-6">Quick Links</h3>
             <ul className="space-y-4">
               <li>
-                <a href="#home" className="text-base text-gray-400 hover:text-yellow-500 transition-colors">Home</a>
+                <a href="#home" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">Home</a>
               </li>
               <li>
-                <a href="#about" className="text-base text-gray-400 hover:text-yellow-500 transition-colors">About Us</a>
+                <a href="#about" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">About Us</a>
               </li>
               <li>
-                <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 transition-colors">Services</a>
+                <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">Services</a>
               </li>
               <li>
-                <a href="#gallery" className="text-base text-gray-400 hover:text-yellow-500 transition-colors">Gallery</a>
+                <a href="#gallery" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">Gallery</a>
               </li>
               <li>
-                <a href="#contact" className="text-base text-gray-400 hover:text-yellow-500 transition-colors">Contact</a>
+                <a href="#testimonials" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">Testimonials</a>
+              </li>
+              <li>
+                <a href="#contact" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">Contact</a>
               </li>
             </ul>
           </div>
@@ -63,19 +62,19 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-6">Our Services</h3>
             <ul className="space-y-4">
               <li>
-                <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 transition-colors">Matrugaya</a>
+                <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">Matrugaya</a>
               </li>
               <li>
-                <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 transition-colors">Tripindi Shraddh</a>
+                <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">Tripindi Shraddh</a>
               </li>
               <li>
-                <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 transition-colors">Narayan Bali / Nag Bali</a>
+                <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">Narayan Bali / Nag Bali</a>
               </li>
               <li>
-                <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 transition-colors">Asthi Visarjan</a>
+                <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">Asthi Visarjan</a>
               </li>
               <li>
-                <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 transition-colors">Pind Daan</a>
+                <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">Pind Daan</a>
               </li>
             </ul>
           </div>

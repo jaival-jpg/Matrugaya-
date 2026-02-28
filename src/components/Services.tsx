@@ -32,8 +32,8 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 bg-white relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-24 bg-gradient-to-b from-white to-yellow-50/50 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span 
             initial={{ opacity: 0 }}
@@ -47,9 +47,9 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-6xl font-serif italic text-gray-900 mb-6 drop-shadow-sm"
           >
-            Sacred Rituals & Ceremonies
+            Services & Pooja
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -70,20 +70,20 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:shadow-yellow-500/10 transition-all duration-300"
+              whileHover={{ y: -12, scale: 1.02 }}
+              className="group bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden shadow-xl border border-white/50 hover:shadow-2xl hover:shadow-yellow-500/20 transition-all duration-500"
             >
               <div className="relative h-64 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-all duration-700"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute bottom-4 left-6 z-20">
-                  <h3 className="text-2xl font-bold text-white flex items-center gap-2">
-                    <Sparkles className="h-5 w-5 text-yellow-400" />
+                <div className="absolute bottom-4 left-6 z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                  <h3 className="text-2xl font-serif italic text-white flex items-center gap-2 drop-shadow-lg">
+                    <Sparkles className="h-5 w-5 text-yellow-400 group-hover:animate-pulse" />
                     {service.title}
                   </h3>
                 </div>
@@ -106,17 +106,19 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-3xl p-8 text-white flex flex-col justify-center items-center text-center shadow-xl"
+            whileHover={{ scale: 1.02 }}
+            className="bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-3xl p-8 text-white flex flex-col justify-center items-center text-center shadow-2xl hover:shadow-yellow-500/40 transition-all duration-500 relative overflow-hidden group"
           >
-            <h3 className="text-3xl font-bold mb-4">Online Registration & Support</h3>
-            <p className="text-yellow-50 mb-8">
+            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+            <h3 className="text-3xl font-serif italic mb-4 relative z-10 drop-shadow-md">Book your Matrugaya Shraddh & Support</h3>
+            <p className="text-yellow-50 mb-8 relative z-10">
               We offer easy online booking for your rituals with guidance over phone/video call for preparation, requirements, and best dates to perform the ceremonies.
             </p>
             <a 
-              href="#register" 
-              className="bg-white text-yellow-600 px-8 py-4 rounded-full font-bold hover:bg-yellow-50 transition-colors shadow-lg"
+              href="#contact" 
+              className="relative z-10 bg-white/90 backdrop-blur-sm text-yellow-600 px-8 py-4 rounded-full font-bold hover:bg-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95"
             >
-              Register Now
+              Contact Us
             </a>
           </motion.div>
         </div>

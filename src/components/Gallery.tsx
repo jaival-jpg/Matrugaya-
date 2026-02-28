@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 export default function Gallery() {
   const images = [
     { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhFnEM7kYfZZycc-1RCJbkRd8L_qRFdcol-kw-ALDDV-pyvBhcDvK2kfrzX5me3EZVSFTAtJKxVvQP6y5ab3VRs1t50QnD53al04neZr_xcRn35o8CSu_T8NrtCa9__45xKrtmbhA4_ZWys7OlYgsOGGxfUTxaTdNDx0GMDYZQD0auPFBDP0396u5xu1b7/s1280/26732.jpg", alt: "Matrugaya Rituals" },
-    { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitx-MQQKMjeNW8TK5oiw3v9nf0R4XKnARKv-lvnACrI5dOaQFGb7trnnRKmKPNDlicZ6A1EZOHoyMN7pCf7HJ0sYjw4GrByH-t9KmlQfEGi5hFFl1YChfEBZ2stk2o04ivk7zWH9B3JSiovSvbMGCDXFOCD_44PzvQCCUrXIUf8n5uXGTdIYVIvspt5yXI/s1083/26711.jpg", alt: "Sidhpur Ceremonies" },
+    { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzbxoIb6Ceiyqw-ucxJD4vkZINqqUQEcCiAWPFunR9c3u31Fa_t8vKc110xLt6Yw-u_F9fMyO2G1HwzIGa7a9tpYvWQJqSdbLoJ_MgdQqw2gvI1bA7EO-HE_xoM5CwrrzcgiqAZxbnM8pkE1_rxv50qo1EMW1uUs1Tr4cymkttF8HCs5NfnZhcUNfEzr2j/s1600/409.jpg", alt: "Sidhpur Ceremonies" },
     { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitx-MQQKMjeNW8TK5oiw3v9nf0R4XKnARKv-lvnACrI5dOaQFGb7trnnRKmKPNDlicZ6A1EZOHoyMN7pCf7HJ0sYjw4GrByH-t9KmlQfEGi5hFFl1YChfEBZ2stk2o04ivk7zWH9B3JSiovSvbMGCDXFOCD_44PzvQCCUrXIUf8n5uXGTdIYVIvspt5yXI/s1083/26711.jpg", alt: "Family Participation" },
     { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrjTREHtuoEVnK0WJO7nKz4hjJaWzZ3gNz336Huvcbu9oxpw8xFe6OlkxQNM827Pts_IWK0Dm3LJP91jmph_pyj6y2_F09hb6FQFhGeedjJnv0mIEyWN-DCyx59srn6SIRJ97wBCz1Bfkc7UrzazlDToi3kKGOxyoPkyUAP3vXkYr-nGlRCRed3foLdFUW/s1600/26702.jpg", alt: "River Rituals" },
     { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZGOVj8m27qi5zJfnKF4DNwMsVNVSg1KRiB8MMXVFUs0pRBIW0Bsik0ZWCIX4W6MEwky2pAA1LEktrarUp7ZLVy6_bAwZKtp0CD0a7bLW_UKAJwmHZQSaHjJYCjIklpzGnebTmVu3HsP7xXiK-JDDw7-Qgbr9pD6KEQTLlLrS2AvEDWjrY3OgLgJEhKlJC/s1600/26705.jpg", alt: "Temple Views" },
@@ -13,14 +13,14 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-yellow-50 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="gallery" className="py-24 bg-gradient-to-t from-yellow-50 to-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-6xl font-serif italic text-gray-900 mb-6 drop-shadow-sm"
           >
             Our Gallery
           </motion.h2>
@@ -52,8 +52,8 @@ export default function Gallery() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white font-medium text-lg tracking-wide">{image.alt}</span>
+              <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                <span className="text-white font-serif italic text-xl tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 drop-shadow-lg">{image.alt}</span>
               </div>
             </motion.div>
           ))}

@@ -41,7 +41,7 @@ export default function Registration() {
                 viewport={{ once: true }}
                 className="text-yellow-600 font-semibold tracking-wider uppercase text-sm mb-4 block"
               >
-                Online Registration
+                Book your Matrugaya Shraddh
               </motion.span>
               <motion.h2 
                 initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ export default function Registration() {
                 viewport={{ once: true }}
                 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
               >
-                Book Your Rituals Now
+                Book your Matrugaya Shraddh
               </motion.h2>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -168,10 +168,10 @@ export default function Registration() {
                 className="w-full py-4 px-8 bg-yellow-500 hover:bg-yellow-600 text-white rounded-xl font-bold text-lg shadow-lg shadow-yellow-500/30 transition-all flex items-center justify-center gap-2"
               >
                 <Send className="h-5 w-5" />
-                Book Now!
+                Book your Matrugaya Shraddh
               </motion.button>
               <p className="text-xs text-center text-gray-500 mt-4">
-                By clicking "Book Now!", your details will be sent securely via WhatsApp to Pandit Prashant Pandya. <br/>
+                By clicking "Book your Matrugaya Shraddh", your details will be sent securely via WhatsApp to Pandit Prashant Pandya. <br/>
                 Or email us directly at <a href="mailto:phpandya123@gmail.com" className="text-yellow-600 hover:underline">phpandya123@gmail.com</a>
               </p>
             </form>

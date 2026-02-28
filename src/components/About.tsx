@@ -15,14 +15,19 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-yellow-50 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24 bg-gradient-to-br from-yellow-50 via-white to-yellow-100 relative overflow-hidden">
+      {/* Decorative background blur blobs */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-300/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-200/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-96 h-96 bg-yellow-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-6xl font-serif italic text-gray-900 mb-6 drop-shadow-sm"
           >
             About Us
           </motion.h2>
@@ -44,9 +49,9 @@ export default function About() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-yellow-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <Star className="text-yellow-500 mr-3 h-6 w-6" />
+            <div className="bg-white/60 backdrop-blur-xl p-8 rounded-2xl shadow-xl border border-white/50 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:bg-white/80 group">
+              <h3 className="text-2xl font-serif font-bold text-gray-900 mb-4 flex items-center">
+                <Star className="text-yellow-500 mr-3 h-6 w-6 group-hover:rotate-180 transition-transform duration-700" />
                 Our Specialities
               </h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -59,9 +64,9 @@ export default function About() {
               </ul>
             </div>
 
-            <div className="bg-yellow-100/50 p-8 rounded-2xl border border-yellow-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                <HeartHandshake className="text-yellow-600 mr-3 h-6 w-6" />
+            <div className="bg-yellow-100/40 backdrop-blur-lg p-8 rounded-2xl border border-white/50 shadow-lg hover:-translate-y-2 transition-all duration-500 hover:shadow-xl group">
+              <h3 className="text-xl font-serif font-bold text-gray-900 mb-3 flex items-center">
+                <HeartHandshake className="text-yellow-600 mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
                 A Great Experience
               </h3>
               <p className="text-gray-700">
@@ -76,22 +81,22 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative group">
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative group border-4 border-white/50">
               <img 
                 src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjha4sLfGPpxdNmgO8MOL4qJHtc87UQOvqK7qyvt97XOGg26pri_UvWM36GJXaDpkevImtgdVzmM5CIx6UuzUDUkaWkxxvD-m69RFFDzaj1TM-5K5PfG-W33T0JfnoYqOTY2jrbP6UOMlSNFi1RB91qIh3EXPvL6hFz7PEvVRkqQv3B9wHlk1htN05MsuRG/s932/21110.jpg" 
                 alt="Pandit Prashant Pandya" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <p className="text-2xl font-bold mb-1">Pandit Prashant Pandya</p>
-                <p className="text-yellow-300 font-medium">Matrugaya Tirth Pandit</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-3xl font-serif italic mb-1">Pandit Prashant Pandya</p>
+                <p className="text-yellow-300 font-medium tracking-wide">Matrugaya Tirth Pandit</p>
               </div>
             </div>
             
             {/* Floating badge */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-yellow-100 max-w-[240px] z-10">
+            <div className="absolute -bottom-6 -left-6 bg-white/80 backdrop-blur-xl p-6 rounded-2xl shadow-2xl border border-white/50 max-w-[240px] z-10 hover:-translate-y-2 transition-transform duration-500">
               <div className="flex items-center gap-4 mb-2">
                 <div className="bg-yellow-100 p-3 rounded-full">
                   <ShieldCheck className="h-6 w-6 text-yellow-600" />
