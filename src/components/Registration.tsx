@@ -168,7 +168,7 @@ export default function Registration() {
                 className="w-full py-4 px-8 bg-yellow-500 hover:bg-yellow-600 text-white rounded-xl font-bold text-lg shadow-lg shadow-yellow-500/30 transition-all flex items-center justify-center gap-2"
               >
                 <Send className="h-5 w-5" />
-                Book your Matrugaya Shraddh
+                Book Now!
               </motion.button>
               <p className="text-xs text-center text-gray-500 mt-4">
                 By clicking "Book your Matrugaya Shraddh", your details will be sent securely via WhatsApp to Pandit Prashant Pandya. <br/>
