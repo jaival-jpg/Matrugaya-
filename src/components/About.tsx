@@ -91,7 +91,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-70 transition-opacity duration-500"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-1 group-hover:translate-y-0 transition-transform duration-500 text-right">
                 <p className="text-3xl font-serif italic mb-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-right">Pandit Prashant Pandya</p>
-                <p className="text-2×1 text-yellow-300 font-medium tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] text-right">Matrugaya Pandit</p>
+                <p className="text-xl text-yellow-300 font-medium tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] text-right">Matrugaya Pandit</p>
               </div>
             </div>
             

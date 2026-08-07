@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -19,6 +20,7 @@ import FloatingButtons from './components/FloatingButtons';
 export default function App() {
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 scroll-smooth overflow-x-hidden select-none">
+      <Loader />
       <Navbar />
       <main className="overflow-x-hidden w-full">
         <Hero />
