@@ -107,19 +107,28 @@ export default function Contact() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="h-full min-h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50 hover:shadow-yellow-500/10 transition-shadow duration-500"
+            className="h-full min-h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50 hover:shadow-yellow-500/10 transition-shadow duration-500 relative group"
           >
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.887968434526!2d72.32768057533508!3d23.916843978556557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395cf39200000001%3A0x6b00000000000000!2sBindu%20Sarovar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              src="https://maps.google.com/maps?q=Matrugaya+Pujan+Sidhpur+Pandit+Prashant+Pandya+Bindu+Sarovar&t=&z=16&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
               allowFullScreen={true} 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              title="Bindu Sarovar Location"
-              className="w-full h-full"
+              title="Sidhpur Matrugaya Pandit Prashant Pandya Location"
+              className="w-full h-full min-h-[400px]"
             ></iframe>
+            <a 
+              href="https://maps.app.goo.gl/Qf6C4gguh4TYhzwFA" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="absolute bottom-4 right-4 bg-white/95 hover:bg-yellow-500 hover:text-white text-gray-900 font-medium px-4 py-2.5 rounded-xl shadow-lg border border-yellow-200 text-sm flex items-center gap-2 transition-all duration-300 backdrop-blur-md"
+            >
+              <MapPin className="w-4 h-4 text-yellow-600 group-hover:text-white" />
+              Open in Google Maps
+            </a>
           </motion.div>
         </div>
       </div>
