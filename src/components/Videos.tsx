@@ -1,8 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 
 export default function Videos() {
   const [playFirst, setPlayFirst] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (playFirst) return;
+
+      const aboutSection = document.getElementById('about');
+      if (aboutSection) {
+        const rect = aboutSection.getBoundingClientRect();
+        // If the top of the about section is above the bottom of the viewport
+        if (rect.top <= window.innerHeight) {
+          setPlayFirst(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initially
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [playFirst]);
 
   const videos = [
     { id: "QZzVqedwINM", title: "Introduction Video 1" },
@@ -39,9 +59,6 @@ export default function Videos() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              onViewportEnter={() => {
-                if (index === 0) setPlayFirst(true);
-              }}
               transition={{ delay: index * 0.2 }}
               whileHover={{ scale: 1.05, rotateY: 5, rotateX: 5 }}
               className="rounded-[2rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.3)] aspect-video w-full bg-white p-3 transform perspective-1000 transition-all duration-500 group"

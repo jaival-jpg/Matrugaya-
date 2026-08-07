@@ -3,48 +3,77 @@ import { motion } from 'motion/react';
 import { Phone, CalendarCheck } from 'lucide-react';
 
 export default function Hero() {
+  const line1 = "Matrugaya Tirth Pandit";
+  const line2 = "Prashant Pandya";
+
+  const containerVariants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.035,
+        delayChildren: 0.15,
+      },
+    },
+  };
+
+  const letterVariants = {
+    hidden: { opacity: 0, x: -12, filter: "blur(4px)" },
+    visible: {
+      opacity: 1,
+      x: 0,
+      filter: "blur(0px)",
+      transition: { duration: 0.22, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section id="home" className="relative min-h-screen flex flex-col pt-24 md:pt-32 pb-24 md:pb-32 overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-yellow-900 to-black overflow-hidden">
-        {/* Blurred background for mobile to fill empty space */}
+    <section id="home" className="relative min-h-screen flex flex-col pt-28 sm:pt-36 md:pt-40 pb-20 md:pb-28 overflow-hidden">
+      {/* Background Image with Minimal Overlay */}
+      <div className="absolute inset-0 z-0 bg-black overflow-hidden">
         <img
-          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUOaKHmsMCWemXDcWZIdWcQxtnhQSXkhdZuQfafkAxHe2__1n392YuG_FC7gLKgnYVlWTUHOeUgdQ9XLa6c6YCdma7M7P-WeGkaXp3VoImri0plmThCAHbEWp1aAVQ-SroQSecFTqeuKh_1ZpxUKr238fT2kBdMmeuw29nRcWB508OFp41PPzJFJS74-eE/s1600/41817.jpg"
-          alt="Background Blur"
-          className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-60 md:hidden scale-110"
+          src="/images/hero_bg.jpg"
+          alt="Bindu Sarovar Sidhpur Temple"
+          className="absolute inset-0 w-full h-full object-cover object-center brightness-110 contrast-105 transition-all duration-700"
           referrerPolicy="no-referrer"
         />
-        <img
-          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUOaKHmsMCWemXDcWZIdWcQxtnhQSXkhdZuQfafkAxHe2__1n392YuG_FC7gLKgnYVlWTUHOeUgdQ9XLa6c6YCdma7M7P-WeGkaXp3VoImri0plmThCAHbEWp1aAVQ-SroQSecFTqeuKh_1ZpxUKr238fT2kBdMmeuw29nRcWB508OFp41PPzJFJS74-eE/s1600/41817.jpg"
-          alt="Pandit doing Pooja"
-          className="relative w-full h-full object-contain md:object-cover drop-shadow-[0_0_30px_rgba(0,0,0,0.8)] brightness-125"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-yellow-900/40 via-transparent to-transparent mix-blend-multiply"></div>
-        {/* Bottom shadow gradient for stylish blend */}
-        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none"></div>
+        {/* Soft, minimal overlay gradient for maximum image visibility while keeping text legible */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/40 pointer-events-none"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white flex flex-col justify-between flex-1 w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-6 mt-8 md:mt-12"
-        >
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif italic tracking-wide text-yellow-400 drop-shadow-2xl leading-tight">
-            Matrugaya Tirth Pandit <br />
-            Prashant Pandya
-          </h1>
-        </motion.div>
+        <div className="space-y-6 pt-2 sm:pt-4 md:pt-6">
+          <motion.h1
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="text-3xl sm:text-5xl md:text-7xl font-serif italic tracking-wide text-[#3e1a00] font-bold drop-shadow-[0_2px_10px_rgba(255,255,255,0.75)] leading-tight"
+          >
+            <span className="inline-block whitespace-nowrap">
+              {line1.split('').map((char, index) => (
+                <motion.span key={index} variants={letterVariants} className="inline-block">
+                  {char === ' ' ? '\u00A0' : char}
+                </motion.span>
+              ))}
+            </span>
+            <br />
+            <span className="inline-block whitespace-nowrap">
+              {line2.split('').map((char, index) => (
+                <motion.span key={`line2-${index}`} variants={letterVariants} className="inline-block">
+                  {char === ' ' ? '\u00A0' : char}
+                </motion.span>
+              ))}
+            </span>
+          </motion.h1>
+        </div>
           
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 1.0, ease: "easeOut" }}
           className="mt-auto pt-12"
         >
-          <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto font-bold drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]">
+          <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto font-bold font-serif drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]" style={{ fontFamily: 'Georgia, serif' }}>
             Your trusted spiritual partner for conducting sacred Hindu rituals with devotion, authenticity, and spiritual precision.
           </p>
 

@@ -81,29 +81,29 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative group border-4 border-white/50">
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl relative group border-4 border-white/50">
               <img 
-                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjha4sLfGPpxdNmgO8MOL4qJHtc87UQOvqK7qyvt97XOGg26pri_UvWM36GJXaDpkevImtgdVzmM5CIx6UuzUDUkaWkxxvD-m69RFFDzaj1TM-5K5PfG-W33T0JfnoYqOTY2jrbP6UOMlSNFi1RB91qIh3EXPvL6hFz7PEvVRkqQv3B9wHlk1htN05MsuRG/s932/21110.jpg" 
+                src="/images/pandit_prashant_pandya.jpg" 
                 alt="Pandit Prashant Pandya" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-2xl font-serif italic mb-1">Pandit Prashant Pandya</p>
-                <p className="text-yellow-300 font-medium tracking-wide">Matrugaya Pandit</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-70 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-1 group-hover:translate-y-0 transition-transform duration-500 text-right">
+                <p className="text-3xl font-serif italic mb-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-right">Pandit Prashant Pandya</p>
+                <p className="text-2×1 text-yellow-300 font-medium tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] text-right">Matrugaya Pandit</p>
               </div>
             </div>
             
             {/* Floating badge */}
-            <div className="absolute -bottom-12 -left-6 bg-white/80 backdrop-blur-xl p-6 rounded-2xl shadow-2xl border border-white/50 max-w-[240px] z-10 hover:-translate-y-2 transition-transform duration-500">
+            <div className="absolute -bottom-6 -left-6 bg-white/80 backdrop-blur-xl p-6 rounded-2xl shadow-2xl border border-white/50 max-w-[240px] z-10 hover:-translate-y-2 transition-transform duration-500">
               <div className="flex items-center gap-4 mb-2">
                 <div className="bg-yellow-100 p-3 rounded-full">
                   <ShieldCheck className="h-6 w-6 text-yellow-600" />
                 </div>
                 <div>
                   <p className="font-bold text-gray-900">Authentic</p>
-                  <p className="text-sm text-gray-500">Matrugaya Pandit</p>
+                  <p className="text-sm text-gray-500">Vedic Traditions</p>
                 </div>
               </div>
             </div>
