@@ -1,11 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-serif: "Playfair Display", "Lora", Georgia, Cambria, serif;
+  --font-display: "Cinzel", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-spiritual-cream: #FFF9F2;
+  --color-spiritual-sand: #FAF2E8;
+  --color-spiritual-gold: #D4AF37;
+  --color-spiritual-gold-light: #F3E5AB;
+  --color-spiritual-terracotta: #A85A32;
+  --color-spiritual-terracotta-dark: #7F3C1A;
+  --color-spiritual-charcoal: #2A1D15;
+  --color-spiritual-brown-dark: #1E120A;
+  --color-spiritual-accent: #E5C158;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Background Sacred Mandala / Dots pattern using pure CSS */
+.sacred-dots {
+  background-color: var(--color-spiritual-cream, #FFF9F2);
+  background-image: radial-gradient(#a85a32 0.75px, transparent 0.75px), radial-gradient(#d4af37 0.5px, #fff9f2 0.5px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  background-blend-mode: multiply;
+  opacity: 0.12;
+}
+
+/* Glassmorphism Navigation bar */
+.glass-navbar {
+  background-color: rgba(30, 18, 10, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Temple column border styling */
+.temple-border {
+  border-image: linear-gradient(to bottom, #d4af37, #a85a32, #1e120a) 1;
+}
+
+/* Hindu Floral / Mandala motif divider */
+.sacred-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.sacred-divider::before,
+.sacred-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-spiritual-gold, #d4af37), transparent);
+}
+
+.sacred-divider-glyph {
+  font-size: 1.25rem;
+  color: var(--color-spiritual-gold, #d4af37);
+  margin: 0 1rem;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
 }

@@ -1,0 +1,995 @@
+import React, { useEffect, useRef } from 'react';
+
+const rawHtmlContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO Meta Tags -->
+<title>History of Matrugaya in Siddhpur | Matrugaya all details</title>
+<meta name="description" content="Discover the sacred history of Matrugaya in Siddhpur.Many families searching for a trusted Matrugaya Pandit in Siddhpur prefer Prashant Pandya because of proper Vedic guidance and peaceful rituals. Learn about the spiritual importance, ancient traditions, and why families perform this ritual for ancestral peace.">
+
+<meta name="matrugaya" content="matrugya information,Matrugaya, Matrugaya History, Siddhpur rituals, Narayan Bali, Tripindi Shradh, Hindu spiritual guidance, Bindu Sarovar">
+<meta name="author" content="Siddhpur Matrugaya Pandit prashant pandya">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="History of Matrugaya in Siddhpur | Sacred Hindu Rituals">
+<meta property="og:description" content="Discover the sacred history of Matrugaya in Siddhpur and its spiritual importance.">
+<meta property="og:image" content="https://i.ibb.co/5WtsTY1z/3a8f33f47b196cc60acb74b5ccfd295f-1.jpg">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/x-code" href="https://i.ibb.co/0VqCJkrG/06b3fef088830bfe08764cedf1b2f3a4-2.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+
+<!-- Schema Markup Placeholder (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://matrugaya-history.vercel.app/"
+  },
+  "headline": "History of Matrugaya in Siddhpur",
+  "description": "Discover the sacred history of Matrugaya in Siddhpur. Learn about the spiritual importance, ancient traditions, and why families perform this ritual for ancestral peace.",
+  "image": "https://i.ibb.co/TDPdz1GY/Screenshot-20260516-235135.png",  
+  "author": {
+    "@type": "Person",
+    "name": "Pandit Prashant Pandya"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Siddhpur Spiritual Guide",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://i.ibb.co/0VqCJkrG/06b3fef088830bfe08764cedf1b2f3a4-2.jpg"
+    }
+  },
+  "datePublished": "2026-05-16",
+  "dateModified": "2026-05-17"
+}
+</script>
+
+
+<!-- FontAwesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    /* --- CSS Variables --- */
+    :root {
+        --bg-cream: #F8F1E7;
+        --bg-light: #FFF8EE;
+        --text-dark: #3A2318; 
+        --text-muted: #6B3E26;
+        --primary-brown: #4B2E1E;
+        --secondary-brown: #8B5A2B;
+        --gold-accent: #C5A059;
+        --gold-light: #E8D3A2;
+        --white: #FFFFFF;
+        --shadow-soft: 0 10px 40px rgba(75, 46, 30, 0.08);
+        --shadow-hover: 0 15px 50px rgba(75, 46, 30, 0.15);
+        --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        --font-heading: 'Playfair Display', serif;
+        --font-body: 'Lora', serif;
+        --nav-height: 80px;
+    }
+
+    /* --- Reset & Base Styles --- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-body);
+        background-color: var(--bg-cream);
+        color: var(--text-dark);
+        line-height: 1.8;
+        font-size: 18px;
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: var(--font-heading);
+        color: var(--primary-brown);
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--secondary-brown);
+        transition: var(--transition);
+    }
+
+    a:hover {
+        color: var(--gold-accent);
+    }
+
+    /* --- Custom UI Elements --- */
+    .sacred-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3rem 0;
+    }
+    .sacred-divider::before, .sacred-divider::after {
+        content: '';
+        height: 1px;
+        background: var(--gold-light);
+        flex: 1;
+        max-width: 100px;
+    }
+    .sacred-divider i {
+        color: var(--gold-accent);
+        margin: 0 15px;
+        font-size: 0.8rem;
+        transform: rotate(45deg);
+    }
+
+    /* Reading Progress Bar */
+    .progress-container {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 4px;
+        background: transparent;
+        z-index: 1001;
+    }
+    .progress-bar {
+        height: 100%;
+        background: var(--gold-accent);
+        width: 0%;
+    }
+
+    /* --- Navigation --- */
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: var(--nav-height);
+        background: rgba(75, 46, 30, 0.98);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .logo {
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--gold-accent);
+        letter-spacing: 1px;
+    }
+    .logo span { color: var(--bg-cream); }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        color: var(--bg-cream);
+        font-size: 1.05rem;
+        font-family: var(--font-heading);
+        font-weight: 500;
+        position: relative;
+    }
+
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--gold-accent);
+        transition: var(--transition);
+    }
+    .nav-links a:hover::after, .nav-links a.active::after {
+        width: 100%;
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        color: var(--gold-accent);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+        padding-top: calc(var(--nav-height) + 4rem);
+        padding-bottom: 2rem;
+        background: linear-gradient(to bottom, var(--bg-light), var(--bg-cream));
+        text-align: center;
+        position: relative;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-image: radial-gradient(var(--gold-light) 1px, transparent 1px);
+        background-size: 30px 30px;
+        opacity: 0.2;
+        z-index: 0;
+    }
+
+    .hero-content {
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        padding: 0 2rem;
+    }
+
+    .category-tag {
+        display: inline-block;
+        background: rgba(197, 160, 89, 0.15);
+        color: var(--secondary-brown);
+        padding: 0.4rem 1.2rem;
+        border-radius: 30px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .meta-info {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        font-style: italic;
+    }
+
+    /* Hero Image - Properly Framed Desktop */
+    .hero-image-container {
+        max-width: 900px;
+        margin: 3rem auto 0;
+        padding: 0 2rem;
+        position: relative;
+        z-index: 1;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .hero-image-actual {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: var(--shadow-hover);
+        border: 8px solid var(--white);
+        outline: 2px solid var(--gold-accent);
+        outline-offset: -12px;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+
+    /* --- Layout improvements for Desktop --- */
+    .main-wrapper {
+        max-width: 2250px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
+
+    .blog-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 350px; /* Tight text, fixed sidebar */
+        gap: 4rem;
+        align-items: start;
+    }
+
+    /* --- Article Content --- */
+    .article-content {
+        background: var(--white);
+        padding: 4rem;
+        border-radius: 20px;
+        box-shadow: var(--shadow-soft);
+    }
+
+    .article-content p {
+        margin-bottom: 1.6rem;
+        color: var(--text-dark);
+        font-size: 1.1rem;
+    }
+
+    .article-content h2 {
+        font-size: 2.2rem;
+        margin-top: 3rem;
+        margin-bottom: 1.2rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+
+    .article-content h2::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 60px;
+        height: 3px;
+        background: var(--gold-accent);
+    }
+
+    .article-content ul {
+        margin-bottom: 1.8rem;
+        padding-left: 1.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .article-content li {
+        margin-bottom: 0.8rem;
+    }
+
+    .first-letter::first-letter {
+        font-family: var(--font-heading);
+        font-size: 4rem;
+        float: left;
+        line-height: 0.8;
+        padding-right: 0.6rem;
+        padding-top: 0.2rem;
+        color: var(--gold-accent);
+    }
+
+    .highlight-block {
+        background: var(--bg-light);
+        border-left: 4px solid var(--gold-accent);
+        padding: 1.5rem 2rem;
+        margin: 2.5rem 0;
+        font-style: italic;
+        border-radius: 0 12px 12px 0;
+        font-size: 1.15rem;
+        color: var(--primary-brown);
+    }
+
+    /* --- Share Buttons --- */
+    .share-container {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--gold-light);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .share-container span {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        color: var(--primary-brown);
+        font-size: 1.1rem;
+        margin-right: 10px;
+    }
+    .share-btn {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-light);
+        border: 1px solid var(--gold-light);
+        color: var(--primary-brown);
+        transition: var(--transition);
+        font-size: 1.1rem;
+    }
+    .share-btn:hover {
+        background: var(--gold-accent);
+        color: var(--white);
+        border-color: var(--gold-accent);
+        transform: translateY(-4px);
+        box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
+    }
+
+    /* --- Sidebar (Fixed & Premium) --- */
+    .sidebar {
+        position: sticky;
+        top: calc(var(--nav-height) + 2rem);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .sidebar-widget {
+        background: var(--white);
+        padding: 2.5rem 2rem;
+        border-radius: 15px;
+        box-shadow: var(--shadow-soft);
+    }
+
+    .widget-title {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid var(--gold-light);
+        padding-bottom: 0.5rem;
+        display: inline-block;
+    }
+
+    /* Table of Contents */
+    .toc-list {
+        list-style: none;
+        padding-left: 0;
+    }
+    .toc-list li {
+        margin-bottom: 1rem;
+        position: relative;
+        padding-left: 1.2rem;
+    }
+    .toc-list li::before {
+        content: '•';
+        color: var(--gold-accent);
+        position: absolute;
+        left: 0;
+        font-size: 1.2rem;
+        top: -2px;
+    }
+    .toc-list a {
+        color: var(--text-muted);
+        font-size: 1rem;
+        display: block;
+        transition: var(--transition);
+    }
+    .toc-list a:hover, .toc-list a.active {
+        color: var(--primary-brown);
+        font-weight: 600;
+        padding-left: 5px;
+    }
+
+    /* Related Posts Card */
+    .related-post {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+        align-items: center;
+        padding-bottom: 1rem;
+        border-bottom: 1px dashed var(--gold-light);
+    }
+    .related-post:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .related-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: var(--bg-light);
+        border: 1px solid var(--gold-light);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: var(--gold-accent);
+    }
+    .related-title {
+        font-size: 0.95rem;
+        font-family: var(--font-heading);
+        color: var(--primary-brown);
+        line-height: 1.4;
+        font-weight: 600;
+    }
+
+    /* --- FAQ Section --- */
+    .faq-section {
+        background: var(--white);
+        padding: 4rem;
+        border-radius: 20px;
+        box-shadow: var(--shadow-soft);
+        margin-top: 4rem;
+    }
+    .faq-section h2 {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        font-size: 2.5rem;
+    }
+    details {
+        background: var(--bg-cream);
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    summary {
+        padding: 1.5rem 2rem;
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--primary-brown);
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+        content: '\f078';
+        font-family: 'FontAwesome';
+        color: var(--gold-accent);
+        transition: transform 0.3s ease;
+    }
+    details[open] summary::after { transform: rotate(180deg); }
+    .faq-content {
+        padding: 0 2rem 1.5rem;
+        color: var(--text-dark);
+        font-size: 1.05rem;
+    }
+
+    /* --- Footer --- */
+    footer {
+        background: var(--primary-brown);
+        color: var(--bg-cream);
+        text-align: center;
+        padding: 4rem 2rem;
+        margin-top: 5rem;
+    }
+    footer h2 { color: var(--gold-accent); }
+    footer p { opacity: 0.8; font-size: 1rem; }
+
+    /* Floating Button */
+    .float-btn {
+        position: fixed;
+        bottom: 30px; right: 30px;
+        width: 60px; height: 60px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        box-shadow: var(--shadow-hover);
+        z-index: 100;
+        transition: var(--transition);
+    }
+    .float-btn:hover { transform: scale(1.1); }
+
+    /* --- Animations --- */
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+    }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* --- Responsive Design (Mobile Width maximized) --- */
+    @media (max-width: 1024px) {
+        .blog-layout {
+            grid-template-columns: 1fr; /* Stack sidebar below article */
+            gap: 3rem;
+        }
+        .sidebar { position: static; }
+    }
+
+    @media (max-width: 768px) {
+        .nav-container { padding: 0 1.5rem; }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: var(--nav-height); left: 0;
+            width: 100%;
+            background: var(--primary-brown);
+            padding: 2rem;
+            text-align: center;
+        }
+        .nav-links.show { display: flex; }
+        .mobile-menu-btn { display: block; }
+        
+        .hero h1 { font-size: 2.5rem; }
+        .hero-content { padding: 0 1rem; }
+        .hero-image-container { padding: 0 1rem; }
+        .hero-image-actual { max-height: 350px; border-width: 4px; outline-offset: -6px; }
+        
+        /* Maximized container width for mobile */
+        .main-wrapper { padding: 2rem 0.8rem; }
+        .article-content { padding: 2rem 1.2rem; border-radius: 12px; }
+        .article-content h2 { font-size: 1.8rem; }
+        .article-content p { font-size: 1rem; }
+        .highlight-block { padding: 1.2rem; font-size: 1.05rem; margin: 1.5rem 0; }
+        
+        .sidebar-widget { padding: 1.8rem 1.2rem; }
+        
+        .faq-section { padding: 2rem 1.2rem; }
+        .faq-section h2 { font-size: 2rem; }
+        summary { padding: 1.2rem; font-size: 1.1rem; }
+        .faq-content { padding: 0 1.2rem 1.2rem; }
+        
+        .share-container { flex-wrap: wrap; justify-content: center; }
+        .share-container span { width: 100%; text-align: center; margin-bottom: 10px; }
+    }
+</style>
+</head>
+<body>
+<!-- Reading Progress Bar -->
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<!-- Header / Navbar -->
+<header id="navbar">
+    <div class="nav-container">
+        <a href="/" class="logo">Matru<span>gaya</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/history-of-matrugaya" class="active">History</a></li>
+            <li><a href="/#services">Rituals</a></li>
+            <li><a href="/about">Siddhpur</a></li>
+            <li><a href="/#contact">Contact Panditji</a></li>
+        </ul>
+        <div class="mobile-menu-btn" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content reveal">
+            <span class="category-tag">Spiritual History</span>
+            <h1>History of Matrugaya in Siddhpur</h1>
+            <div class="meta-info">
+                <span><i class="far fa-calendar-alt"></i> Updated: May 2026</span>
+                <span><i class="far fa-clock"></i> 4 Min Read</span>
+            </div>
+        </div>
+        
+        <!-- Real Hero Image Inserted Here -->
+        <div class="hero-image-container reveal">
+            <img src="https://i.ibb.co/5WtsTY1z/3a8f33f47b196cc60acb74b5ccfd295f-1.jpg" alt="Sacred Matrugaya Rituals in Siddhpur" class="hero-image-actual">
+        </div>
+    </section>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+        <div class="blog-layout">
+            
+            <!-- Article Content Area -->
+            <article class="article-content reveal">
+                
+                <p class="first-letter">Matrugaya is one of the most sacred Hindu rituals performed for the peace and salvation of the mother’s soul after death. This ancient tradition has been followed for centuries in India, especially in Siddhpur, Gujarat, which is considered the holiest place for Matrugaya Vidhi.</p>
+                
+                <p>Siddhpur is a historic spiritual town located on the banks of the Saraswati River in Gujarat. According to Hindu scriptures and local beliefs, this sacred place is deeply connected with maternal rituals, Shradh ceremonies, and ancestral peace. Every year, thousands of devotees from different parts of India visit Siddhpur to perform Matrugaya Pooja for their departed mothers.</p>
+
+                <div class="sacred-divider">
+                    <i class="fas fa-square"></i>
+                </div>
+
+                <h2 id="origin">Origin of Matrugaya</h2>
+                <p>The word "Matrugaya" comes from two Sanskrit words:</p>
+                <ul>
+                    <li><strong>"Matru"</strong> meaning mother</li>
+                    <li><strong>"Gaya"</strong> meaning sacred ritual for ancestors</li>
+                </ul>
+                <p>While Gaya in Bihar is famous for Pitru Shradh for fathers and ancestors, Siddhpur became especially important for rituals dedicated to mothers. Hindu mythology states that <strong>Lord Parashurama performed rituals for his mother</strong> at Siddhpur after her death. Because of this divine connection, Siddhpur became known as the spiritual center for Matrugaya rituals. Importance about Matrugaya.<strong><u><a style="color : blue" href="https://matrugaya.vercel.app/">more learn</a></u></strong></p>
+                <p>Many ancient texts and local traditions mention that performing Matrugaya Vidhi in Siddhpur helps provide peace and liberation to the departed soul of the mother.</p>
+
+                <h2 id="importance">Spiritual Importance of Siddhpur</h2>
+                <p>Siddhpur is considered one of the most spiritually powerful places in Gujarat. The town is home to the famous <strong>Bindu Sarovar</strong>, a sacred lake associated with ancestral rituals and Hindu traditions.</p>
+                
+                <div class="highlight-block">
+                    According to beliefs, Bindu Sarovar was created from the tears of Lord Vishnu. It is considered one of the rare holy places dedicated specifically to maternal rituals. This is the main reason why devotees prefer Siddhpur for Matrugaya Pooja.
+                </div>
+
+                <p>The peaceful environment, ancient temples, Vedic traditions, and experienced priests make Siddhpur a trusted destination for performing sacred rituals properly.</p>
+
+                <h2 id="why-perform">Why Families Perform Matrugaya Pooja</h2>
+                <p>In Hindu culture, parents are given the highest respect. Matrugaya is performed to express gratitude, love, and spiritual duty toward the mother after her passing.</p>
+                <p>Families believe that this ritual:</p>
+                <ul>
+                    <li>Brings peace to the mother’s soul</li>
+                    <li>Removes ancestral obstacles</li>
+                    <li>Gives mental satisfaction to family members</li>
+                    <li>Helps maintain family harmony and blessings</li>
+                </ul>
+                <p>The ritual is generally performed with proper Vedic procedures under the guidance of experienced priests in Siddhpur.</p>
+
+                <h2 id="traditions">Ancient Traditions Still Alive Today</h2>
+                <p>One of the most unique things about Siddhpur is that ancient traditions are still followed with devotion and discipline. Even today, priests perform rituals using traditional Vedic methods passed down through generations.</p>
+                <p>Many devotees look for trusted and experienced guides for these sacred ceremonies. Several families visiting Siddhpur for Matrugaya rituals have taken only one best Pandit from Siddhpur Matrugaya <strong style="font-size: 18px;">Pandit Prashant Pandya</strong>, who is known for helping families understand the rituals in a peaceful and do Matrugaya pooja.<br><br><strong style="font-family: robot;font-size: 30px;"> Contact : 9825561708  8200817133</strong></p>
+
+                <h2 id="modern">Modern Relevance of Matrugaya</h2>
+                <p>Even in modern times, the importance of Matrugaya remains strong.<br><strong><u><a style="color :blue " href="http://www.sidhpurmatrugayapandit.com">sidhpurmatrugayapandit.com</a></u></strong> People living in cities and abroad continue to visit Siddhpur to maintain their spiritual connection with family traditions and ancestral values.</p>
+                <p>With increasing awareness through online platforms, more people are learning about the spiritual significance of Siddhpur and Matrugaya Vidhi. Today, devotees often search online for trusted information, proper guidance, and experienced priests before visiting Siddhpur.</p>
+
+                <div class="sacred-divider">
+                    <i class="fas fa-square"></i>
+                </div>
+
+                <h2 id="conclusion">Conclusion</h2>
+                <p>The history of Matrugaya in Siddhpur is deeply connected with Hindu spirituality, ancient traditions, and respect for motherhood. For centuries, this sacred ritual has helped families honor the memory of their mothers with devotion and gratitude.</p>
+                <p>Siddhpur continues to remain one of the most important spiritual destinations for Matrugaya Pooja in India. Its holy atmosphere, sacred Bindu Sarovar, and traditional Vedic rituals make it a unique and meaningful place for ancestral ceremonies.Contact Pandit Prashant Pandya when matrugaya is to be done.</p>
+                <p>For families seeking spiritual guidance and proper Vedic rituals, Siddhpur remains a timeless center of faith, devotion, and tradition.</p>
+
+                <!-- Dynamic Share Section -->
+                <div class="share-container">
+                    <span>Share this wisdom:</span>
+                    <a href="#" id="share-wa" class="share-btn" target="_blank" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" id="share-fb" class="share-btn" target="_blank" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" id="share-tw" class="share-btn" target="_blank" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="sidebar reveal">
+                
+                <!-- Table of Contents Widget (Placed ABOVE Related Articles) -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Table of Contents</h3>
+                    <ul class="toc-list" id="tocList">
+                        <li><a href="#origin">Origin of Matrugaya</a></li>
+                        <li><a href="#importance">Spiritual Importance of Siddhpur</a></li>
+                        <li><a href="#why-perform">Why Families Perform Pooja</a></li>
+                        <li><a href="#traditions">Ancient Traditions Alive</a></li>
+                        <li><a href="#modern">Modern Relevance</a></li>
+                        <li><a href="#conclusion">Conclusion</a></li>
+                    </ul>
+                </div>
+
+                <!-- Related Posts Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Related Articles</h3>
+                    
+                    <div class="related-post">
+                        <div class="related-icon"><i class="fas fa-om"></i></div>
+                        <a href="/about" class="related-title">Matrugaya: The Complete Spiritual Guide</a>
+                    </div>
+                    
+                    <div class="related-post">
+                        <div class="related-icon"><i class="fas fa-fire"></i></div>
+                        <a href="/#services" class="related-title">What is Pind Daan and Why is it Important?</a>
+                    </div>
+
+                    <div class="related-post">
+                        <div class="related-icon"><i class="fas fa-praying-hands"></i></div>
+                        <a href="/about" class="related-title">Why do Matrugaya? The Spiritual Significance</a>
+                    </div>
+
+                    <div class="related-post">
+                        <div class="related-icon"><i class="fas fa-water"></i></div>
+                        <a href="/#services" class="related-title">The Importance of Tarpan in Hindu Culture</a>
+                    </div>
+                    
+                    <div class="related-post">
+                        <div class="related-icon"><i class="fas fa-peace"></i></div>
+                        <a href="/#services" class="related-title">Complete Guide to Narayan Bali Rituals</a>
+                    </div>
+                    
+                    <div class="related-post">
+                        <div class="related-icon"><i class="fas fa-hands-holding-circle"></i></div>
+                        <a href="/#services" class="related-title">Understanding Tripindi Shradh Procedure</a>
+                    </div>
+                </div>
+
+            </aside>
+        </div> <!-- End Blog Layout -->
+
+        <!-- FAQ Section -->
+        <div class="faq-section reveal">
+            <h2>Frequently Asked Questions</h2>
+            
+            <details>
+                <summary>What is Matrugaya?</summary>
+                <div class="faq-content">
+                    Matrugaya is a sacred Hindu ritual performed specifically for the peace, salvation, and liberation of a mother's soul after her death.
+                </div>
+            </details>
+            
+            <details>
+                <summary>Why is Siddhpur famous for Matrugaya?</summary>
+                <div class="faq-content">
+                    Siddhpur is famous because Hindu mythology states Lord Parashurama performed rituals for his mother here. It is home to the sacred Bindu Sarovar, a holy lake dedicated to maternal rituals.
+                </div>
+            </details>
+
+            <details>
+                <summary>Who performs the Matrugaya Vidhi?</summary>
+                <div class="faq-content">
+                    The ritual is typically performed by the sons or family members of the departed mother, under the strict guidance of experienced Vedic priests (Pandits) in Siddhpur.
+                </div>
+            </details>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <h2>Siddhpur Spiritual Guidance</h2>
+    <p>Preserving ancient Vedic traditions and assisting families in sacred ancestral rituals.</p>
+    <div class="sacred-divider" style="margin: 1.5rem auto; max-width: 300px;">
+        <i class="fas fa-om" style="color: var(--bg-cream); transform: none;"></i>
+    </div>
+    <p>&copy; 2026 Siddhpur Matrugaya. All Rights Reserved.</p>
+</footer>
+`;
+
+interface HistoryOfMatrugayaHtmlPageProps {
+  onNavigateHome?: () => void;
+  onNavigateAbout?: () => void;
+}
+
+export default function HistoryOfMatrugayaHtmlPage({
+  onNavigateHome,
+  onNavigateAbout,
+}: HistoryOfMatrugayaHtmlPageProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Inject FontAwesome and Google Fonts if not present
+    const faId = 'font-awesome-cdn';
+    if (!document.getElementById(faId)) {
+      const link = document.createElement('link');
+      link.id = faId;
+      link.rel = 'stylesheet';
+      link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+      document.head.appendChild(link);
+    }
+
+    const fontsId = 'history-page-google-fonts';
+    if (!document.getElementById(fontsId)) {
+      const link = document.createElement('link');
+      link.id = fontsId;
+      link.rel = 'stylesheet';
+      link.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap';
+      document.head.appendChild(link);
+    }
+
+    // Set page title & meta
+    document.title = 'History of Matrugaya in Siddhpur | Matrugaya all details';
+
+    // 1. Mobile Menu Toggle
+    (window as any).toggleMenu = function () {
+      const navLinks = document.getElementById('navLinks');
+      if (navLinks) {
+        navLinks.classList.toggle('show');
+      }
+    };
+
+    // 2. Reading Progress Bar & TOC Highlight
+    const handleScroll = () => {
+      const myBar = document.getElementById('myBar');
+      if (myBar) {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        myBar.style.width = scrolled + '%';
+      }
+
+      // TOC Highlight
+      const sections = document.querySelectorAll('article h2');
+      const navLi = document.querySelectorAll('.toc-list li a');
+      let current = '';
+      sections.forEach((section) => {
+        const sectionTop = (section as HTMLElement).offsetTop;
+        if (window.pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute('id') || '';
+        }
+      });
+
+      navLi.forEach((a) => {
+        a.classList.remove('active');
+        if (current !== '' && a.getAttribute('href')?.includes(current)) {
+          a.classList.add('active');
+        }
+      });
+
+      // Scroll Reveal Animation
+      const reveals = document.querySelectorAll('.reveal');
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add('active');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Trigger on load
+
+    // 4. Dynamic Share Links generator
+    const currentUrl = encodeURIComponent(window.location.href);
+    const currentTitle = encodeURIComponent(document.title);
+
+    const shareWa = document.getElementById('share-wa') as HTMLAnchorElement | null;
+    const shareFb = document.getElementById('share-fb') as HTMLAnchorElement | null;
+    const shareTw = document.getElementById('share-tw') as HTMLAnchorElement | null;
+
+    if (shareWa) shareWa.href = `https://api.whatsapp.com/send?text=${currentTitle}%20${currentUrl}`;
+    if (shareFb) shareFb.href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+    if (shareTw) shareTw.href = `https://twitter.com/intent/tweet?url=${currentUrl}&text=${currentTitle}`;
+
+    // Intercept clicks on links inside the rendered HTML to route smoothly
+    const handleContainerClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement).closest('a');
+      if (!target) return;
+      const href = target.getAttribute('href');
+      if (!href) return;
+
+      if (href === '/' || href === '#home') {
+        e.preventDefault();
+        if (onNavigateHome) {
+          onNavigateHome();
+        } else {
+          window.history.pushState({}, '', '/');
+          window.dispatchEvent(new Event('popstate'));
+        }
+      } else if (href === '/about') {
+        e.preventDefault();
+        if (onNavigateAbout) {
+          onNavigateAbout();
+        } else {
+          window.history.pushState({}, '', '/about');
+          window.dispatchEvent(new Event('popstate'));
+        }
+      } else if (href.startsWith('/#')) {
+        e.preventDefault();
+        window.history.pushState({}, '', href);
+        if (onNavigateHome) {
+          onNavigateHome();
+          setTimeout(() => {
+            const hash = href.replace('/#', '');
+            const el = document.getElementById(hash);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 150);
+        }
+      }
+    };
+
+    const containerEl = containerRef.current;
+    if (containerEl) {
+      containerEl.addEventListener('click', handleContainerClick);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (containerEl) {
+        containerEl.removeEventListener('click', handleContainerClick);
+      }
+    };
+  }, [onNavigateHome, onNavigateAbout]);
+
+  return (
+    <div
+      ref={containerRef}
+      className="history-of-matrugaya-html-root"
+      dangerouslySetInnerHTML={{ __html: rawHtmlContent }}
+    />
+  );
+}

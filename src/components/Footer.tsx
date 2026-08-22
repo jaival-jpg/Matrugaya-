@@ -40,7 +40,10 @@ export default function Footer() {
                 <a href="#home" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">Home</a>
               </li>
               <li>
-                <a href="#about" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">About Us</a>
+                <a href="/about" className="text-base text-yellow-500 font-medium hover:text-yellow-400 hover:translate-x-2 transition-all duration-300 inline-block">About</a>
+              </li>
+              <li>
+                <a href="/history-of-matrugaya" className="text-base text-yellow-500 font-medium hover:text-yellow-400 hover:translate-x-2 transition-all duration-300 inline-block">History of Matrugaya</a>
               </li>
               <li>
                 <a href="#services" className="text-base text-gray-400 hover:text-yellow-500 hover:translate-x-2 transition-all duration-300 inline-block">Services</a>
