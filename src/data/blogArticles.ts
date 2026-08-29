@@ -11,7 +11,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     tags: ['Matrugaya', 'Siddhpur', 'Bindu Sarovar', 'Ancestral Rituals', 'Pind Daan'],
     publishedDate: 'May 2026',
     readTime: '4 Min Read',
-    featuredImage: '/images/siddhpur_ritual_hero.jpg',
+    featuredImage: '/images/hero_bg.jpg',
     author: {
       name: 'Pandit Prashant Pandya',
       avatar: '/images/pandit_prashant_pandya.jpg',
