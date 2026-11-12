@@ -128,7 +128,22 @@ export default function App() {
       />
     );
   }
+// Contact Page Route
+const isContactRoute = currentPath === '/contact';
 
+if (isContactRoute) {
+  return (
+    <div className="min-h-screen bg-white">
+      <Loader />
+      <Navbar onNavigate={navigateTo} />
+      <main>
+        <Contact />
+      </main>
+      <Footer />
+      <FloatingButtons />
+    </div>
+  );
+}
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 scroll-smooth overflow-x-hidden select-none">
       <Loader />
